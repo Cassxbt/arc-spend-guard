@@ -6,8 +6,8 @@
     "strict": true,
     "declaration": true,
     "outDir": "dist",
-    "rootDir": ".",
+    "rootDir": "src",
     "skipLibCheck": true
   },
-  "include": ["src", "test", "examples"]
+  "include": ["src"]
 }

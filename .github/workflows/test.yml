@@ -1,0 +1,23 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npm test
+      # Build explicitly: proving `main` resolves must not depend on prepack running first.
+      - run: npm run build
+      - run: node -e "require.resolve('./dist/index.js')"
+      # The published tarball must carry no test code.
+      - run: npm pack --dry-run
+      - run: 'test "$(npm pack --dry-run 2>&1 | grep -c dist/test)" -eq 0'

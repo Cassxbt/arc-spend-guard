@@ -6,14 +6,29 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist", "LICENSE", "README.md"],
-  "engines": { "node": ">=20" },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "tsc",
-    "test": "tsc --noEmit && node --test test/",
-    "typecheck": "tsc --noEmit"
+    "test": "tsc -p tsconfig.test.json && node --test dist-test/test/*.test.js",
+    "typecheck": "tsc -p tsconfig.test.json --noEmit",
+    "prepack": "npm run build"
   },
-  "keywords": ["arc", "circle", "usdc", "x402", "gateway", "agents", "budget"],
+  "keywords": [
+    "arc",
+    "circle",
+    "usdc",
+    "x402",
+    "gateway",
+    "agents",
+    "budget"
+  ],
   "devDependencies": {
     "@types/node": "^20.0.0",
     "typescript": "^5.4.0"
