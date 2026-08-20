@@ -4,7 +4,8 @@ import { resolveSettlement, paymentsInBatch, type TransferRecord } from "../src/
 
 const BATCH = "0xc0ba816a46d8aad425bbd8b7fdcd3e197b53da96989c4feb8695ef9a43dad294";
 
-/** Shape recorded from a real Circle x402 response. Note `txHash`, which the SDK does not type. */
+/** Shape recorded from a real Circle x402 response, with addresses replaced by placeholders.
+ *  Note `txHash`: the SDK does not declare it, but the API returns it. */
 function transfer(over: Partial<TransferRecord> = {}): TransferRecord {
   return {
     id: "05c7355d-f80d-4c1d-b79f-0ff7986cb57f",
