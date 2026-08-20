@@ -1,0 +1,21 @@
+{
+  "name": "arc-spend-guard",
+  "version": "0.1.0",
+  "description": "Decide before you pay, prove after you pay: budget allocation and settlement resolution for USDC agents on Arc",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "LICENSE", "README.md"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc --noEmit && node --test test/",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["arc", "circle", "usdc", "x402", "gateway", "agents", "budget"],
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}
