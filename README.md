@@ -5,7 +5,7 @@
 ![License: MIT](https://img.shields.io/badge/license-MIT-black) ![Zero runtime dependencies](https://img.shields.io/badge/runtime%20deps-0-1ED760) ![node:test](https://img.shields.io/badge/tests-node%3Atest-6C5CE7)
 
 ```bash
-npm install arc-spend-guard
+npm install github:Cassxbt/arc-spend-guard
 ```
 
 ---

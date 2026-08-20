@@ -84,7 +84,7 @@ test("clampBid refuses proposals that are not finite numbers", () => {
   }
 });
 
-test("clampBid holds a proposal inside [minAsk, ceiling]", () => {
+test("clampBid holds a proposal inside [ceil(minAsk), ceiling]", () => {
   const allocator = new BudgetAllocator({ budget: USDC, perPaymentCap: 5_000, rng: seeded(1) });
   const c = payee("a", 0.9, 500);
   assert.equal(allocator.clampBid(c, 1), 500, "below minAsk should lift to minAsk");

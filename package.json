@@ -3,6 +3,15 @@
   "version": "0.1.0",
   "description": "Decide before you pay, prove after you pay: budget allocation and settlement resolution for USDC agents on Arc",
   "license": "MIT",
+  "author": "Cassxbt <96814839+Cassxbt@users.noreply.github.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cassxbt/arc-spend-guard.git"
+  },
+  "homepage": "https://github.com/Cassxbt/arc-spend-guard#readme",
+  "bugs": {
+    "url": "https://github.com/Cassxbt/arc-spend-guard/issues"
+  },
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
